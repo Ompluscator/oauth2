@@ -85,8 +85,8 @@ type Endpoint struct {
 
 // JSON keys for top-level member of the Claims request JSON.
 const (
-	UserInfoClaims = "userinfo"
-	IdTokenClaims  = "id_token"
+	UserInfoClaim = "userinfo"
+	IdTokenClaim  = "id_token"
 )
 
 // claim describes JSON object used to specify additional information

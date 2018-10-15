@@ -618,7 +618,7 @@ func TestClaimSet_AddVoluntaryClaim(t *testing.T) {
 
 	expected := `{"userinfo":{"name":null}}`
 	if string(body) != expected {
-		t.Errorf("Claims request parameter = %s; want %s", string(body), expected)
+		t.Errorf("Claims request parameter = %q; want %q", string(body), expected)
 	}
 }
 
@@ -633,7 +633,7 @@ func TestClaimSet_AddClaimWithValue_Essential(t *testing.T) {
 
 	expected := `{"userinfo":{"name":{"essential":true,"value":"nameValue"}}}`
 	if string(body) != expected {
-		t.Errorf("Claims request parameter = %s; want %s", string(body), expected)
+		t.Errorf("Claims request parameter = %q; want %q", string(body), expected)
 	}
 }
 
@@ -648,7 +648,7 @@ func TestClaimSet_AddClaimWithValue_Voluntary(t *testing.T) {
 
 	expected := `{"userinfo":{"name":{"value":"nameValue"}}}`
 	if string(body) != expected {
-		t.Errorf("Claims request parameter = %s; want %s", string(body), expected)
+		t.Errorf("Claims request parameter = %q; want %q", string(body), expected)
 	}
 }
 
@@ -663,7 +663,7 @@ func TestClaimSet_AddClaimWithValues_Essential(t *testing.T) {
 
 	expected := `{"id_token":{"email":{"essential":true,"values":["emailValue","mailValue"]}}}`
 	if string(body) != expected {
-		t.Errorf("Claims request parameter = %s; want %s", string(body), expected)
+		t.Errorf("Claims request parameter = %q; want %q", string(body), expected)
 	}
 }
 
@@ -678,6 +678,6 @@ func TestClaimSet_AddClaimWithValues_Voluntary(t *testing.T) {
 
 	expected := `{"id_token":{"email":{"values":["emailValue","mailValue"]}}}`
 	if string(body) != expected {
-		t.Errorf("Claims request parameter = %s; want %s", string(body), expected)
+		t.Errorf("Claims request parameter = %q; want %q", string(body), expected)
 	}
 }
